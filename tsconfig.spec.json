@@ -5,7 +5,7 @@
     "types": [
       "jasmine",
       "node"
-    ]
+, "googlemaps"    ]
   },
   "files": [
     "src/test.ts",
