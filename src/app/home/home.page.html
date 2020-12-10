@@ -4,9 +4,19 @@
       Mapa com Ionic
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-search placeholder="Destino" (ionChange)="findPlaces($event)"></ion-search>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
-   <div #map id="map">
-   </div>
+  <ion-list [hidden]="listAddress.length">
+    <ion-item button *ngFor="let address of listAddress" (click)="createRoute(address)">
+      {{address.description}}
+    </ion-item>
+
+    <ion-list>
+      <div #map id="map">
+
+      </div>
 </ion-content>
